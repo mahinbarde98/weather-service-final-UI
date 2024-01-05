@@ -1,0 +1,17 @@
+
+<div class="card text-center">
+    <h2>{{ data.additionalInfo.location.name }}</h2>
+  
+    <h2>Weather Information:</h2>
+    <p style="margin-left: 2px;">
+      Location: {{ data.additionalInfo.location.name }},
+      {{ data.additionalInfo.location.region }},
+      {{ data.additionalInfo.location.country }}
+    </p>
+    <p>Temperature: {{ data.additionalInfo.current.temp_c }}°C</p>
+    <div>
+        <i class="fa-solid fa-heart icon-large" (click)="addToFavorites(data.additionalInfo.location.name)"></i>
+    </div>
+    
+    <button mat-button (click)="onClose()">Close</button>
+  </div>

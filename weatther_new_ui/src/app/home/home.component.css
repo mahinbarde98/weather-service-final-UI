@@ -1,0 +1,61 @@
+
+.background-image-container {
+  background-image: url('../../assets/weather.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  position: fixed;
+  width: 100%;
+}
+
+  .weather-card {
+    width: 23%;
+    margin-right: 2%;
+        
+   
+  }
+
+  .list {
+    display: flex;
+    overflow-x: hidden;
+    padding: 5px;
+  }
+
+  .item {
+    min-width: 300px;
+    height: auto;
+    margin: 0 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.911);
+    text-align: center;
+    background-color: rgb(121, 187, 241);
+    border-radius: 8px;
+    opacity: 0.9;
+    color: black solid 2px;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+
+
+.list {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  margin-left: 3%;
+  margin-top: 3%;
+  
+}
+
+.item:hover {
+  background-color: #66759c; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.icon-large {
+  font-size: 24px;
+}
+
+
+
+

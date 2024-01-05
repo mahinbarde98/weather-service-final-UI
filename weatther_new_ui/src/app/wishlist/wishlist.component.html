@@ -1,0 +1,31 @@
+
+<div class="text-center" style="  background-color: darkgray; min-height: 100vh;">
+  <button type="button" class="btn btn-primary" style="margin-top: 2px;" (click)="getuserWishlist()">Wishlist</button>
+
+  <div style="margin-top: 5px; margin-bottom: 5px;">
+    <label for="filterInput">Filter:</label>
+    <input type="text" id="filterInput" [(ngModel)]="searchText" placeholder="Enter city name">
+  </div>
+
+  <div class="mx-auto" style="max-width: 800px;">
+    
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Favorite City</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of favoriteCities | filterPipe:searchText" (click)="onCityClick(city)">
+          <td>{{ city.id }}</td>
+          <td>{{ city.cityName }}</td>
+          <td>
+            <button (click)="removeCity(city.cityName)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

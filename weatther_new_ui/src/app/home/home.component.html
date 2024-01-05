@@ -1,0 +1,32 @@
+
+<div class="background-image-container">
+  <h1 class="text-center" style="margin-top: 5px3; color: cornsilk;">live weather data....</h1>
+  <div class="list" #cardsContainer id="WeatherCards">
+    <div class="item" *ngFor="let weatherData of sharedService.weatherData">
+      <ng-container *ngIf="weatherData">
+        <h2>{{ weatherData.location?.name }}</h2>
+        <p>Region: {{ weatherData.location?.region }}</p>
+        <p>Country: {{ weatherData.location?.country }}</p>
+        <p>Temperature: {{ weatherData.current?.temp_c }}°C</p>
+        <i class="fa-solid fa-heart icon-large" (click)="addToFavorites(weatherData)"></i>
+      </ng-container>
+    </div>
+  </div>
+  
+  <div class="list" #otherCardsContainer id="OtherWeatherCards">
+    <div class="item" *ngFor="let otherweatherData of sharedService.otherweatherData">
+      <ng-container *ngIf="otherweatherData">
+        <h2>{{ otherweatherData.location?.name }}</h2>
+        <p>Region: {{ otherweatherData.location?.region }}</p>
+        <p>Country: {{ otherweatherData.location?.country }}</p>
+        <p>Temperature: {{ otherweatherData.current?.temp_c }}°C</p>
+        <i class="fa-solid fa-heart icon-large" (click)="addToFavorites(otherweatherData)"></i>
+      </ng-container>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
